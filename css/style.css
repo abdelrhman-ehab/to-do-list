@@ -1,0 +1,305 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --body-bg: white;
+    --font-color: black;
+    --border-color: black;
+    --iconF-color: white;
+    --main-color: var(--main-color);
+}
+html{
+    scroll-behavior: smooth;
+}
+p{
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+::selection{
+    background-color: var(--main-color);
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: var(--body-bg);
+    padding-bottom: 50px;
+}
+.container{
+    padding: 0 30px;
+}
+
+/* nav */
+nav{
+    margin: 30px 0px;
+}
+nav .row{
+    /* background-color: blue; */
+    padding-top: 30px;
+}
+nav .row span{
+    font-size: 40px;
+    font-weight: 800;
+    color: var(--font-color);
+
+}
+nav .row> .col-12>span>span{
+    color: chocolate;
+}
+nav .fa-plus{
+    position: fixed;
+    transform: translateX(-50%) translateY(-50%);
+    bottom: 10px;
+    right: 10px;
+    background-color: var(--main-color);
+    color: var(--iconF-color);
+    width: min-content;
+    font-size: 30px;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+nav .fa-plus:hover{
+    background-color: transparent;
+    color: var(--main-color);
+    outline: 2px solid var(--main-color);
+}
+.theameToggle{
+    font-size: 25px;
+    cursor: pointer;
+    color: #2c2c56;
+}
+.fa-sun{
+    background-color: transparent;
+    text-shadow: 0 0 20px rgba(255, 0, 30, 0.518), 0 0 20px gold;
+} 
+.fa-moon{
+    background-color: transparent;
+    text-shadow: 0 0 10px rgba(10, 0, 101, 0.567), 0 0 20px rgba(15, 3, 122, 0.545);
+} 
+.main-color{
+    cursor: pointer;
+    border-radius: 3px;
+    padding: 3px;
+}
+/* main */
+main .addTask{
+    height: 55%;
+    width: 50%;
+    padding-top: 30px;
+    box-shadow: 0px 0px 10px var(--main-color);
+    position: fixed;
+    transform: translateX(-50%) translateY(-50%);
+    left: 50%;
+    top: 55%;
+    display: none;
+    color: var(--font-color);
+    border-radius: 7px;
+}
+main .addTask .container{
+    position: relative;
+}
+.addTaskBtn .col-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main .addTask input, textarea{
+    padding: 0;
+    border: 0;
+    outline: 0;
+    margin-bottom: 20px;
+    border: 1px solid gray;
+}
+main .addTask label{
+    color: black;
+}
+main .addTask button{
+    background-color: var(--main-color);
+    color: black;
+    padding: 4px 10px;
+}
+main .addTask button:hover{
+    background-color: transparent;
+    color: var(--main-color);
+    border: var(--main-color) solid 1px;
+}
+.addTask i{
+    font-size: 25px;
+    color: rgba(255, 0, 0, 0.485);
+    position: absolute;
+    top: -2px !important;
+    right: 30px;
+    cursor: pointer;
+}
+.addTask i:hover{
+    color: red;
+    transform: scale(1.2);
+}
+.task-modification .col-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    height: 100%;
+}
+.task-modification .col-content i{
+    cursor: pointer;
+    font-size: 20px;
+    transition: all .6s;
+}
+.task-modification .col-content>:first-child{
+    color: rgba(0, 128, 0, .8);
+}
+.task-modification .col-content>:first-child:hover{
+    color: rgb(0, 236, 0);
+}
+.task-modification .col-content>:last-child{
+    color: rgba(255, 0, 0, .8);
+}
+.task-modification .col-content>:last-child:hover{
+    color: rgb(255, 0, 0);
+}
+.task-modification .col-content>:nth-child(2){
+    color: rgba(14, 147, 191, .8);
+}
+.task-modification .col-content>:nth-child(2):hover{
+    color: rgb(2, 186, 247);
+}
+.task-modification .col-content i:hover{
+    transform: scale(1.2);
+}
+.taskDate{
+    margin-top: 10px;
+    color: gray;
+    font-size: 12px !important;
+}
+.task .task-detail .col-content{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid var(--border-color);
+    border-left: 1px solid var(--border-color);
+    padding: 20px;
+    border-radius: 10px;
+}
+.task{
+    margin-bottom: 30px;
+}
+.task .task-detail .col-content p{
+    font-size: 16px;
+    line-break: anywhere;
+    color: var(--font-color) !important;
+}
+.task .task-detail .col-content h3{
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--main-color);
+}   
+
+.clearAll{
+    background-color: var(--main-color);
+    color: var(--iconF-color);
+    margin-top: 30px;
+}
+.clearAll:hover{
+    background-color: transparent;
+    color: var(--main-color);
+    outline: var(--main-color) solid 1px;
+}
+
+@media screen and (max-width: 500px){
+    main .addTask input{
+        width: 100%;
+    }
+    .addTaskBtn .col-content{
+        justify-content: end;
+    }
+    main .addTask button{
+        width: 100%;
+    }
+    .task-modification .col-content{
+        justify-content: space-between;
+        gap: 0;
+    }
+}
+
+/* Responsive Layout Fixes */
+@media screen and (max-width: 768px) {
+  nav .row span {
+    font-size: 35px;
+    text-align: center;
+  }
+
+  nav i {
+    font-size: 25px;
+    padding: 8px;
+  }
+
+  .task .task-detail .col-content h3 {
+    font-size: 24px;
+  }
+
+  .task .task-detail .col-content p {
+    font-size: 13px;
+  }
+
+  main .addTask {
+    width: 90%;
+    top: 50%;
+    padding-top: 20px;
+  }
+
+  .form-floating label,
+  .form-floating input,
+  .form-floating textarea {
+    font-size: 14px;
+  }
+
+
+
+  main .addTask button {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+
+  .task-modification .col-content {
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .task-modification .col-content i {
+    font-size: 18px;
+  }
+
+  .clearAll {
+    font-size: 14px;
+    width: 100%;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .task .task-detail .col-content h3 {
+    font-size: 20px;
+  }
+
+  .task .task-detail .col-content p {
+    font-size: 12px;
+  }
+
+  nav i {
+    right: 15px;
+    bottom: 15px;
+  }
+
+  .addTask i {
+    right: 15px;
+    top: 10px;
+  }
+}

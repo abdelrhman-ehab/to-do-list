@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>To-Do List</title>
+        <link rel="stylesheet" href="css/all.min.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 d-flex justify-content-between align-items-center">
+                            <span><span>To-Do
+                                    <span>List</span></span></span>
+                                    <div class="theme d-flex align-items-center gap-5">
+                                        <input type="color" class="main-color">
+                                        <i class="fa-solid fa-moon darkMode theameToggle"></i>
+                                    </div>
+                        </div>
+                    </div>
+                </div>  
+                <!-- <p class="lightMode">NM</p> -->
+                <i class="fa-solid fa-plus"></i>
+            </nav>
+        </header>
+        <main>
+            <div class="addTask">
+                <div class="container">
+                    <h2 class="mb-3">Add Your Task</h2>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control taskTitle"
+                            id="floatingInput"
+                            placeholder="Ex: Studing">
+                        <label for="floatingInput">Task Title</label>
+                    </div>
+                    <div class="form-floating">
+                        <textarea class="form-control"
+                            placeholder="Leave a comment here"
+                            id="floatingTextarea2"
+                            style="height: 100px"></textarea>
+                        <label
+                            for="floatingTextarea2">Task Description</label>
+                    </div>
+                    <button class="btn">Add Task</button>
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            </div>
+            <div class="Tasks">
+                <div class="container">
+                    <div class="row tasksContainer">
+
+                    </div>
+                </div>
+            </div>
+            <div class="tasksHandling container">
+                <button class="btn fs-6 clearAll">Clear All Tasks</button>
+            </div>
+        </main>
+
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
